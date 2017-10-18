@@ -20,7 +20,8 @@ module.exports = (server) => {
                 payload: {
                     content: Joi.string().min(0).required(),
                     creationdate: Joi.date().timestamp().required(),
-                    iduser: Joi.number().integer().min(0).required()
+                    iduser: Joi.number().integer().min(0).required(),
+                    idmessenger: Joi.string().min(15).max(17).required()
                 }
             }
         }

@@ -1,5 +1,4 @@
 'use-strict'
-import { Pool } from 'pg'
 import { Client } from 'pg'
 require('dotenv').config()
 

@@ -2,18 +2,17 @@
 require('dotenv').config()
 
 const path = process.env.BASIC_PATH
-const GIPHY_TOKEN = process.env.GIPHY_TOKEN
 
 module.exports = {
     extern: {
         gifService: {
             getRandomGif: (tag) => {
-                return `http://localhost:4322/api/gif/random/${tag}`
+                return `http://192.168.100.1:4322/api/gif/random/${tag}`
             }
         },
         messengerService: {
-            postMessage: () => {
-                return 'http://localhost:4321/api/message/'
+            messagePost: () => {
+                return 'http://localhost:4321/api/reply'
             }
         }
     },
