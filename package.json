@@ -15,11 +15,15 @@
     "boom": "^6.0.0",
     "dotenv": "^4.0.0",
     "hapi": "^16.6.2",
+    "hapi-swaggered": "^2.12.2",
+    "hapi-swaggered-ui": "^2.6.2",
     "joi": "^13.0.0",
     "node-fetch": "^1.7.3",
     "nodemon": "^1.10.0",
     "pg": "^7.3.0",
     "request": "^2.83.0",
+    "inert": "^4.2.1",
+    "vision": "^4.1.1",
     "uuid": "^3.1.0"
   }
 }

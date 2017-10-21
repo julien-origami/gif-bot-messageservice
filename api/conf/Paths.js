@@ -7,7 +7,7 @@ module.exports = {
     extern: {
         gifService: {
             getRandomGif: (tag) => {
-                return `http://192.168.100.1:4322/api/gif/random/${tag}`
+                return `http://192.168.43.20:4322/api/gif/random/${tag}`
             }
         },
         messengerService: {

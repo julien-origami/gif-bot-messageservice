@@ -8,7 +8,15 @@ module.exports = (server) => {
     server.route({
         method: 'GET',
         path: Paths.intern.message,
-        handler: MessageService.getMessage
+        config: {
+            tags: ['api'],
+            validate: {
+                params: {
+                    id: Joi.number().integer().required().description('id')
+                }
+            },
+            handler: MessageService.getMessage
+        }
     })
 
     server.route({
@@ -16,6 +24,7 @@ module.exports = (server) => {
         path: Paths.intern.messagePost,
         handler: MessageService.postMessage,
         config: {
+            tags: ['api'],
             validate: {
                 payload: {
                     content: Joi.string().min(0).required(),
@@ -30,12 +39,28 @@ module.exports = (server) => {
     server.route({
         method: 'DELETE',
         path: Paths.intern.message,
-        handler: MessageService.deleteMessage
+        config: {
+            tags: ['api'],
+            validate: {
+                params: {
+                    id: Joi.number().integer().required().description('id')
+                }
+            },
+            handler: MessageService.deleteMessage
+        }
     })
 
     server.route({
         method: 'GET',
         path: Paths.intern.messages,
-        handler: MessageService.getMessages
+        config: {
+            tags: ['api'],
+            validate: {
+                params: {
+                    idUser: Joi.number().integer().required().description('idUser')
+                }
+            },
+            handler: MessageService.getMessages
+        }
     })
 }
